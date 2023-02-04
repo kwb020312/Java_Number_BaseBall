@@ -1,11 +1,12 @@
 package playbaseball;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Input {
-	public ArrayList<String> getNumbers() {
-		ArrayList<String> myArr = new ArrayList<>();
+	public List<Integer> getNumbers() {
+		List<Integer> myArr = new ArrayList<>();
 	
 		Scanner s = new Scanner(System.in);
 		System.out.println("숫자를 입력해주세요: ");
@@ -20,7 +21,10 @@ public class Input {
 				return getNumbers();
 			}
 			
-			myArr.add(a);
+			myArr.add(Integer.parseInt(a));
+			
+			// 3자리 이상이라면, 즉시 반환
+			if(myArr.size() >= 3) return myArr;
 		}
 		
 		
