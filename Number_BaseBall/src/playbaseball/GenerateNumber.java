@@ -10,7 +10,7 @@ public class GenerateNumber {
 	}
 	
 	// 컴퓨터 숫자배열
-	public List<Integer> comNumbers() {
+	public List<Integer> getNumbers() {
 		List<Integer> comArr = new ArrayList<>();
 		
 		// 중복되지 않은 3가지 수 뽑기
