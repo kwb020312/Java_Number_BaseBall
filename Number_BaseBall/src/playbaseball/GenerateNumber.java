@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GenerateNumber {
 	// 1~9 난수 생성
-	private int random() {
+	public int random() {
 		return (int)(Math.random() * 9 + 1);
 	}
 	
