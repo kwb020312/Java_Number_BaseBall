@@ -1,15 +1,21 @@
 package playbaseball;
 
+import java.util.List;
+
 public class Test {
 
 	public static void main(String[] args) {
-		// 컴퓨터 수 생성
-		GenerateNumber computerNum = new GenerateNumber();
-		// 사용자 수 입력
-		Input userNum = new Input();
-		Check check = new Check();
-		System.out.println("컴퓨터가 뽑은 수: "+computerNum.getNumbers());
-		System.out.println("중복된 수: " + check.matchLength(computerNum.getNumbers(), userNum.getNumbers()));
+		GenerateNumber generateNumber = new GenerateNumber();
+		Input input = new Input();
+		Result result = new Result();
+		
+		List<Integer> computer = generateNumber.getNumbers();
+		List<Integer> user = input.getNumbers();
+		String res = result.getResult(computer, user); 
+		
+		System.out.println("Computer: " + computer);
+		System.out.println("User: " + user);
+		System.out.println(res);
 	}
 
 }

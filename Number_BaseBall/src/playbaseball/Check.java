@@ -1,6 +1,5 @@
 package playbaseball;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Check {
@@ -16,12 +15,12 @@ public class Check {
 		return matches;
 	}
 	
-	public int strikeCount(ArrayList<Integer> computer, ArrayList<Integer> user) {
+	public int strikeCount(List<Integer> computer, List<Integer> user) {
 		int strike = 0;
 		
 		for(int i = 0 ; i < 3 ; i ++) {
 			int curComputer = computer.get(i);
-			int curUser = computer.get(i);
+			int curUser = user.get(i);
 			
 			if(curComputer == curUser) strike++;
 		}
