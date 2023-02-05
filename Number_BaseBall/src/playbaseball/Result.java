@@ -5,7 +5,7 @@ import java.util.List;
 public class Result {
 	Check check = new Check();
 	public String getResult(List<Integer> computer, List<Integer> user) {
-		// 총 중복 수
+		// 총 정답 수
 		int total = check.matchLength(computer, user); 
 		int strike = check.strikeCount(computer, user);
 		int ball = total - strike;
