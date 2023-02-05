@@ -37,7 +37,7 @@ public class Input {
 			myArr.add(Integer.parseInt(a));
 			
 			// 3자리 이상이라면, 즉시 반환
-			if(myArr.size() >= 3) {
+			if(myArr.size() > 3) {
 				String getApply = getTrans.substring(0, 3);
 				System.out.println(getApply + "까지의 숫자만 반영되었습니다.");
 				return myArr;
