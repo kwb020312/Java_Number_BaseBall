@@ -1,6 +1,5 @@
 package playbaseball;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Run {

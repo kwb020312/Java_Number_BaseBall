@@ -13,7 +13,7 @@ public class Check {
 		}
 		
 		return matches;
-	}
+	} 
 	
 	public int strikeCount(List<Integer> computer, List<Integer> user) {
 		int strike = 0;

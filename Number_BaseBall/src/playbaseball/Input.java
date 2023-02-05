@@ -1,8 +1,10 @@
 package playbaseball;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Input {
 	public List<Integer> getNumbers() {
@@ -15,13 +17,22 @@ public class Input {
 		int get = s.nextInt();
 		String getTrans = Integer.toString(get);
 		
-		// 중복값이 있다면, 재귀
-		for(String a : getTrans.split("")) {
-			if(myArr.contains(a)) {
-				System.out.println("중복된 숫자가 감지되었습니다.");
-				return getNumbers();
-			}
-			
+		// 3글자 미만의 수를 입력받았다면, 다시
+		while(getTrans.length() < 3) {
+			s = new Scanner(System.in);
+			System.out.println("3개 이상의 숫자를 입력해주세요: ");
+			get = s.nextInt();
+			getTrans = Integer.toString(get);
+		}
+		
+		// 중복값 제거
+		List<String> splitTrans = Arrays.asList(getTrans.split(""));
+		splitTrans.stream()
+		.distinct().collect(Collectors.toList());
+		
+		
+		// 사용자 입력 추가
+		for(String a : splitTrans) {
 
 			myArr.add(Integer.parseInt(a));
 			
