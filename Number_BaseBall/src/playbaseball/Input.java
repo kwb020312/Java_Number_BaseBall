@@ -36,7 +36,7 @@ public class Input {
 			getTrans = Integer.toString(get);
 			
 			splitTrans = Arrays.asList(getTrans.split(""));
-			splitTrans.stream()
+			splitTrans = splitTrans.stream()
 			.distinct().collect(Collectors.toList());
 		}
 		
