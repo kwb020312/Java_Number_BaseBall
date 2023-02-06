@@ -23,7 +23,7 @@ public class Run {
 				curResult = result.getResult(computer, user);
 				System.out.println(curResult);
 			}
-			rePlayFlag = replay.replay();
+			rePlayFlag = replay.replay(); 
 		}
 	}
 
