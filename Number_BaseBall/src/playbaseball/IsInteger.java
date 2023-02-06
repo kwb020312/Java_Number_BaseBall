@@ -15,7 +15,7 @@ public class IsInteger {
     public Integer onlyInteger() {
         String box = s.nextLine();
         Integer boxNum = 0;
-
+        
         // 개행을 입력한 경우
         if(box.length() == 0) {
             System.out.println("값이 입력되지 않았습니다.");
