@@ -10,6 +10,7 @@ public class Input {
 		BelowChar belowChar = new BelowChar();
 		Scanner s = new Scanner(System.in);
 		IsInteger isInteger = new IsInteger(s);
+		
 		System.out.print("숫자를 입력해주세요: ");
 		
 		// 자료형이 정수가 아니라면 재입력
