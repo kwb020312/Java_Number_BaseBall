@@ -2,17 +2,17 @@ package playbaseball;
 
 import java.util.Scanner;
 
-public class IsInteger {
+public class CheckInputValue {
     Scanner s;
 
-    public IsInteger() {}
+    public CheckInputValue() {}
 
-    public IsInteger(Scanner s) {
+    public CheckInputValue(Scanner s) {
         this.s = s;
     }
 
     // 숫자만 입력 가능
-    public Integer onlyInteger() {
+    public Integer check() {
         String box = s.nextLine();
         Integer boxNum = 0;
         

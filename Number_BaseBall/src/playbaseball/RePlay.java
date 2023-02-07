@@ -8,9 +8,7 @@ public class RePlay {
 		System.out.println("Yes: 1, No: 2");
 		Scanner s = new Scanner(System.in);
 		int flag = s.nextInt();
-		
-		if(flag == 1) return true;
-		return false;
+		return flag == 1;
 		
 	}
 }

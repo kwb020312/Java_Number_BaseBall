@@ -5,7 +5,7 @@ import java.util.List;
 public class Run {
 
 	public static void main(String[] args) {
-		GenerateNumber generateNumber = new GenerateNumber();
+		Computer computer = new Computer();
 		Input input = new Input();
 		Result result = new Result();
 		RePlay replay = new RePlay();
@@ -13,14 +13,14 @@ public class Run {
 		boolean rePlayFlag = true;
 		
 		while(rePlayFlag) {
-			List<Integer> computer = generateNumber.getNumbers();
+			List<Integer> computerArr = computer.getNumbers();
 			List<Integer> user = input.getNumbers();
-			String curResult = result.getResult(computer, user);
+			String curResult = result.getResult(computerArr, user);
 			System.out.println(curResult);   
 			
 			while(!curResult.equals("3스트라이크")) {
 				user = input.getNumbers();
-				curResult = result.getResult(computer, user);
+				curResult = result.getResult(computerArr, user);
 				System.out.println(curResult);
 			}
 			rePlayFlag = replay.replay(); 
