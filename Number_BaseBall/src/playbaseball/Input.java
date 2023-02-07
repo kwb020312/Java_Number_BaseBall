@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Input {
 	public List<Integer> getNumbers() {
 		List<Integer> myArr = new ArrayList<>();
-
 		System.out.print("숫자를 입력해주세요: ");
 
 		Scanner s = new Scanner(System.in);
